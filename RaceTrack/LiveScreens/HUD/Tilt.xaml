@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="RaceTrack.LiveScreens.Tilt"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RaceTrack.LiveScreens"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock TextAlignment="Center" Foreground="#FFE81123" FontSize="16">
+                    Schräglage
+            </TextBlock>
+            <TextBlock TextAlignment="Center" Name="TiltText" FontSize="32">
+                20°
+            </TextBlock>
+            <TextBlock TextAlignment="Center" Name="MaxTilt" FontSize="16" Foreground="#FFE81123">
+                [60°]
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>

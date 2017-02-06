@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="RaceTrack.LiveScreens.Menu.BeforeRace"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RaceTrack.LiveScreens.Menu"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer>
+            <StackPanel>
+                <TextBlock FontSize="32" Margin="0,0,0,16">Neues Rennen</TextBlock>
+                <TextBlock Margin="0,0,0,8">Name</TextBlock>
+                <TextBox Name="NameInput"></TextBox>
+                <TextBlock Name="Errors" Foreground="Red"></TextBlock>
+                <Button HorizontalAlignment="Stretch" Margin="32" Background="Red" Padding="10" Tapped="Button_Tapped">Starten</Button>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

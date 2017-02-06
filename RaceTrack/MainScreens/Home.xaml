@@ -1,0 +1,77 @@
+﻿<Page
+    x:Class="RaceTrack.MainScreens.Home"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RaceTrack.MainScreens"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <TextBlock FontSize="32">Letztes Rennen</TextBlock>
+                <StackPanel Orientation="Horizontal" Margin="32,0">
+                    <Grid>
+                        <Ellipse Width="64" Height="64" Fill="Red"></Ellipse>
+                        <TextBlock Name="LastRaceDay" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{ Binding }" FontSize="16" FontWeight="Bold">
+                        Tag des letzten Rennens
+                        </TextBlock>
+                    </Grid>
+                    <StackPanel Margin="10">
+                        <TextBlock Name="LastRaceName" Foreground="Red" FontWeight="Bold" Text="{ Binding }" TextTrimming="CharacterEllipsis">Name letztes Rennen</TextBlock>
+                        <TextBlock Name="LastRaceStartTime" Foreground="DarkGray" Text="{ Binding }">12.05.2016 03:22</TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Name="TotalDistanceText" Text="{ Binding }" Foreground="DarkGray">4,2 km</TextBlock>
+                            <TextBlock Margin="8,0" Foreground="DarkGray"> |</TextBlock>
+                            <TextBlock Foreground="DarkGray">Ø</TextBlock>
+                            <TextBlock Name="AverageSpeedText" Text="{ Binding }" Foreground="DarkGray" Margin="4,0">72 km/h</TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+                <TextBlock FontSize="32">Rekorde</TextBlock>
+                <Grid Margin="32,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" Margin="0,10,10,10">
+                            <TextBlock FontWeight="Bold" TextTrimming="CharacterEllipsis">Geschwindigkeit</TextBlock>
+                            <TextBlock Name="MaxSpeed" Foreground="DarkGray" Text="{ Binding }">215 km/h</TextBlock>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1" Margin="0,10">
+                            <TextBlock FontWeight="Bold" TextTrimming="CharacterEllipsis">Schnellste Runde</TextBlock>
+                            <TextBlock Name="FastestRound" Foreground="DarkGray" Text="{ Binding }">314 km</TextBlock>
+                        </StackPanel>
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" Margin="0,10,10,10">
+                            <TextBlock FontWeight="Bold" TextTrimming="CharacterEllipsis">G-Kraft</TextBlock>
+                            <TextBlock Name="MaxForce" Foreground="DarkGray" Text="{ Binding }">6,3</TextBlock>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1" Margin="0,10">
+                            <TextBlock FontWeight="Bold" TextTrimming="CharacterEllipsis">Schräglage</TextBlock>
+                            <TextBlock Name="MaxTilt" Foreground="DarkGray" Text="{ Binding }">12°</TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+
+                <Button HorizontalAlignment="Stretch" Margin="32" Background="Red" Padding="10" Tapped="Button_Tapped">Rennen aufzeichnen</Button>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

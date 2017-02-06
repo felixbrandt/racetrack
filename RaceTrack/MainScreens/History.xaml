@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="RaceTrack.MainScreens.History"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RaceTrack.MainScreens"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer>
+            <StackPanel>
+                <TextBlock FontSize="32">Letzte Rennen</TextBlock>
+                <ItemsControl ItemsSource="{Binding}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0,0,0,16">
+                                <TextBlock Text="{Binding Name}" TextTrimming="CharacterEllipsis" FontWeight="Bold" Foreground="Red"></TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding StartTime}" Foreground="DarkGray"></TextBlock>
+                                    <TextBlock Foreground="DarkGray">-</TextBlock>
+                                    <TextBlock Text="{Binding EndTime}" Foreground="DarkGray"></TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding TotalDistance}" Foreground="DarkGray"></TextBlock>
+                                    <TextBlock Foreground="DarkGray" Margin="4,0">|</TextBlock>
+                                    <TextBlock Text="{Binding AverageSpeed}" Foreground="DarkGray"></TextBlock>
+                                </StackPanel>
+                                <TextBlock Text="{Binding RoundCount}" Foreground="DarkGray"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

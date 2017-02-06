@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="2394FDMSOFT.Racetrack" Publisher="CN=927B32B7-BDEE-47E0-90BF-75186942A62D" Version="1.0.0.0" />
+  <mp:PhoneIdentity PhoneProductId="647cab32-fc20-4a72-8e11-dce6335b3041" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>Racetrack</DisplayName>
+    <PublisherDisplayName>FDM SOFT</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="RaceTrack.App">
+      <uap:VisualElements DisplayName="Racetrack" Square150x150Logo="Assets\Icon_300.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="RaceTrack ist die App für ambitionierte Hobbyrennfahrer! Während der Fahrt kannst du die Renndaten aufzeichnen und live analysieren. Für Motorradfahrer wird sogar eine Messung der Schräglage unterstützt." BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\default_tile.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="Assets\Splashscreen.png" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <DeviceCapability Name="location" />
+  </Capabilities>
+</Package>

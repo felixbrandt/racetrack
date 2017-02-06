@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="RaceTrack.MainScreens.Settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RaceTrack.MainScreens"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+            <StackPanel>
+                <TextBlock FontSize="32" Margin="0,0,0,4">Einstellungen</TextBlock>
+                <TextBlock>Maßeinheiten</TextBlock>
+                <ComboBox HorizontalAlignment="Stretch" Name="UnitSelection" SelectionChanged="unitSelectionChanged">
+                    <ComboBoxItem>
+                        Metrisch
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        Imperial
+                    </ComboBoxItem>
+                </ComboBox>
+
+                <TextBlock FontSize="32" Margin="0,16,0,4">HUD-Elemente</TextBlock>
+
+                <ToggleSwitch OffContent="Aus" OnContent="Ein" Name="MapSwitch" Toggled="Switch_Toggled">Karte</ToggleSwitch>
+                <ToggleSwitch OffContent="Aus" OnContent="Ein" Name="TotalTimeSwitch" Toggled="Switch_Toggled">Gesamtzeit</ToggleSwitch>
+                <ToggleSwitch OffContent="Aus" OnContent="Ein" Name="SpeedSwitch" Toggled="Switch_Toggled">Geschwindigkeit</ToggleSwitch>
+                <ToggleSwitch OffContent="Aus" OnContent="Ein" Name="RoundTimeSwitch" Toggled="Switch_Toggled">Rundenzeit</ToggleSwitch>
+                <ToggleSwitch OffContent="Aus" OnContent="Ein" Name="GForceSwitch" Toggled="Switch_Toggled">G-Kraft</ToggleSwitch>
+                <ToggleSwitch OffContent="Aus" OnContent="Ein" Name="TiltSwitch" Toggled="Switch_Toggled">Schräglage (Nur Motorrad)</ToggleSwitch>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
